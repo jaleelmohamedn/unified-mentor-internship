@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Analytics</title><link rel="stylesheet" href="css/styles.css"></head>
+<body>
+<header><h1>OT Analytics</h1><div class="nav" style="padding:8px 12px;"><a class="link" href="dashboard.html">Dashboard</a><button id="logoutBtn">Logout</button></div></header>
+<main class="card">
+  <div class="grid grid-3"><input type="date" id="fromDate"><input type="date" id="toDate"><button id="run">Run</button></div>
+  <div id="results" class="grid grid-3" style="margin-top:12px;"></div>
+</main>
+<script src="js/firebase-config.js"></script>
+<script src="js/logger.js"></script>
+<script src="js/analytics.js"></script>
+<script src="js/auth.js"></script>
+</body></html>

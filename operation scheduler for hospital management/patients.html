@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Patients</title><link rel="stylesheet" href="css/styles.css"></head>
+<body>
+<header><h1>Manage Patients</h1><div class="nav" style="padding:8px 12px;"><a class="link" href="dashboard.html">Dashboard</a><button id="logoutBtn">Logout</button></div></header>
+<main class="grid">
+<section class="card">
+  <form id="patientForm" class="grid grid-3">
+    <input type="hidden" id="patId"/>
+    <input id="pname" placeholder="Patient Name" required/>
+    <input id="mrn" placeholder="MRN" required/>
+    <input id="age" placeholder="Age" type="number"/>
+    <select id="sex"><option value="">Sex</option><option>Male</option><option>Female</option><option>Other</option></select>
+    <input id="pphone" placeholder="Phone"/>
+    <button type="submit">Save</button>
+    <button type="button" id="resetBtn">Reset</button>
+  </form>
+</section>
+<section class="card">
+  <h2>Patients</h2>
+  <table class="table" id="patientsTable">
+    <thead><tr><th>Name</th><th>MRN</th><th>Age</th><th>Sex</th><th>Phone</th><th>Actions</th></tr></thead><tbody></tbody>
+  </table>
+</section>
+</main>
+<script src="js/firebase-config.js"></script>
+<script src="js/logger.js"></script>
+<script src="js/patients.js"></script>
+<script src="js/auth.js"></script>
+</body></html>
