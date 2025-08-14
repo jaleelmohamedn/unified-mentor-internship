@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right top, #8e2de2, #4a00e0);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+h1, h3 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+form input,
+form select,
+form button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  width: 48%;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+form button {
+  width: 100%;
+  background-color: #4a00e0;
+  cursor: pointer;
+}
+
+.summary, .transactions {
+  margin-top: 1rem;
+}
+
+#transaction-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.transaction-item span {
+  flex: 1;
+}
+
+.delete-btn {
+  background: #ff4d4d;
+  border: none;
+  color: white;
+  padding: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.glass-button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+  margin-top: 20px;
+  width: 100%;
+}
+
+.glass-button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 6px 30px rgba(255, 255, 255, 0.4);
+  transform: scale(1.02);
+}

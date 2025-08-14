@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container glass">
+    <h1>💸 Expense Tracker</h1>
+
+    <form id="transaction-form">
+      <input type="date" id="date" required />
+      <input type="text" id="description" placeholder="Description" required />
+      <input type="text" id="category" placeholder="Category (e.g., Food)" required />
+      <input type="number" id="amount" placeholder="Amount" required />
+      <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+      </select>
+      <button type="submit">Add Transaction</button>
+    </form>
+
+    <div class="summary">
+      <h3>Summary</h3>
+      <p>Total Income: ₹<span id="total-income">0</span></p>
+      <p>Total Expense: ₹<span id="total-expense">0</span></p>
+      <p>Net Balance: ₹<span id="net-balance">0</span></p>
+    </div>
+
+    <div class="transactions">
+      <h3>Transactions</h3>
+      <ul id="transaction-list"></ul>
+    </div>
+    <button id="download-pdf" class="glass-button">Download PDF Report</button>
+
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</body>
+</html>
