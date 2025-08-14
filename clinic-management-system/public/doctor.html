@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doctor — Direction</title>
+  <link rel="stylesheet" href="./styles.css"/>
+  <script type="module" src="./js/firebase.js"></script>
+  <script type="module" src="./js/logger.js"></script>
+  <script type="module" src="./js/services/patientsService.js"></script>
+  <script type="module" src="./js/services/prescriptionsService.js"></script>
+  <script type="module" src="./js/ui/doctorUI.js"></script>
+</head>
+<body>
+  <main class="container glass">
+    <h2>Doctor Workspace</h2>
+    <p>Signed in as: <span id="doctorEmail">—</span></p>
+
+    <section class="glass">
+      <h3>Waiting List (by token)</h3>
+      <ul id="waitingList"></ul>
+    </section>
+
+    <section class="glass">
+      <h3>Examine Patient</h3>
+      <form id="examForm">
+        <label>Patient ID <input id="patientId" required /></label>
+        <label>Diagnosis <textarea id="diagnosis" required></textarea></label>
+        <label>Prescription (comma separated) <input id="prescription" placeholder="Tab 1, Syrup 2" required/></label>
+        <button type="submit">Save & Notify Reception</button>
+      </form>
+      <p class="msg" id="examMsg"></p>
+    </section>
+
+    <p><a href="./index.html">Home</a></p>
+  </main>
+</body>
+</html>

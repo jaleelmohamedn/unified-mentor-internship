@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reception — Direction</title>
+  <link rel="stylesheet" href="./styles.css"/>
+  <script type="module" src="./js/firebase.js"></script>
+  <script type="module" src="./js/logger.js"></script>
+  <script type="module" src="./js/services/tokensService.js"></script>
+  <script type="module" src="./js/services/patientsService.js"></script>
+  <script type="module" src="./js/services/billingService.js"></script>
+  <script type="module" src="./js/ui/receptionistUI.js"></script>
+</head>
+<body>
+  <main class="container glass">
+    <h2>Reception Desk</h2>
+    <p>Signed in as: <span id="receptionistEmail">—</span></p>
+
+    <section class="glass">
+      <h3>Register Patient & Generate Token</h3>
+      <form id="newPatientForm">
+        <label>Full Name <input id="fullName" required/></label>
+        <label>Phone <input id="phone" required/></label>
+        <label>Age <input id="age" type="number" min="0" required/></label>
+        <label>Gender
+          <select id="gender" required>
+            <option value="">Select</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <button type="submit">Create + Token</button>
+      </form>
+      <p class="msg" id="newPatientMsg"></p>
+    </section>
+
+    <section class="glass">
+      <h3>Bill Generator</h3>
+      <form id="billForm">
+        <label>Patient ID <input id="billPatientId" required/></label>
+        <label>Base Consultation (₹) <input id="baseFee" type="number" min="0" required/></label>
+        <label>Medicines (₹) <input id="medFee" type="number" min="0" required/></label>
+        <label>Other Charges (₹) <input id="otherFee" type="number" min="0" value="0"/></label>
+        <button type="submit">Create Bill</button>
+      </form>
+      <p class="msg" id="billMsg"></p>
+    </section>
+
+    <p><a href="./index.html">Home</a></p>
+  </main>
+</body>
+</html>
